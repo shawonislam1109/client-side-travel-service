@@ -4,6 +4,8 @@ import Home from "../Component/Home/Home";
 import Login from "../Component/Login/Login";
 import Signup from "../Component/signUp/Singup";
 import Main from "../Layout/Main";
+import AllService from "../Shared/AllService/AllService";
+import SingleService from "../Shared/Myservice/SingleService";
 
 export const route = createBrowserRouter([
     {
@@ -27,6 +29,15 @@ export const route = createBrowserRouter([
             {
                 path: '/signup',
                 element: <Signup />
+            },
+            {
+                path: '/SingleService/:id',
+                element: <SingleService />,
+                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+            },
+            {
+                path: '/service',
+                element: <AllService></AllService>
             }
         ]
     },
