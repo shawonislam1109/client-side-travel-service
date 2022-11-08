@@ -1,18 +1,17 @@
-import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import { GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
-import { FaGithub, FaGoogle } from 'react-icons/fa';
+import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 
 
 
 const Login = () => {
-    const { GoogleSignIn, GithubSignIn } = useContext(AuthContext);
+    const { GoogleSignIn, } = useContext(AuthContext);
 
     const provider = new GoogleAuthProvider()
-    const gitProvider = new GithubAuthProvider();
     const { signIn, setLoader } = useContext(AuthContext);
     const [error, setError] = useState('');
     const navigate = useNavigate();
@@ -52,16 +51,6 @@ const Login = () => {
             })
             .catch(error => console.error(error))
     }
-
-    const githubHandlesubmit = () => {
-        GithubSignIn(gitProvider)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
-                navigate('/home')
-            })
-            .catch(error => console.error(error))
-    }
     return (
         <div className='mt-5 md:w-9/12  my-10 mx-auto' >
 
@@ -89,25 +78,15 @@ const Login = () => {
                 </div>
                 <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
 
-
                 {/* log in site   */}
                 <div className='flex justify-center items-center md:block mt-5 '>
-                    <button onClick={googleHandleSubmit} className="relative inline-flex  items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
+                    <p onClick={googleHandleSubmit} className="relative inline-flex  items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
                         <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                             <FaGoogle className='inline w-5 h-5' />   SignIN Google
                         </span>
-                    </button>
-
-                    <button onClick={githubHandlesubmit} className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
-                        <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                            <FaGithub className='inline w-5 h-5' /> SignIN Github
-                        </span>
-                    </button>
+                    </p>
                 </div>
             </form>
-
-
-
         </div>
     );
 };
