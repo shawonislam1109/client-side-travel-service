@@ -25,10 +25,9 @@ const Header = () => {
 
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li className='text-lg text-slate-800 font-semibold'><Link to='/home'>Home</Link></li>
-                            <li className='text-lg text-slate-800 font-semibold' tabIndex={0}><Link to='/login' >  Log In</Link>
+                            <li className='text-lg text-slate-800 font-semibold' tabIndex={0}><Link to='/service' >Service</Link>
                             </li>
-                            <li className='text-lg text-slate-800 font-semibold'><Link to='/signup'>Sign Up </Link></li>
-                            <li onClick={Logout} className='text-lg text-white font-semibold'><Link>Log Out</Link></li>
+                            <li className='text-lg text-slate-800 font-semibold'><Link to='/review'>Review</Link></li>
                         </ul>
                     </div>
                     <div className='flex justify-center items-center '>
@@ -40,9 +39,9 @@ const Header = () => {
                     <ul className="menu menu-horizontal p-0">
                         <li className='text-lg text-white  font-semibold'><Link to='/home'>Home</Link></li>
                         <li className='text-lg text-white font-semibold' tabIndex={0}>
-                            <Link to='/login'>Log In </Link>
+                            <Link to='/service'>Service</Link>
                         </li>
-                        <li className='text-lg text-white font-semibold'><Link to='/signup'>Sign Up</Link></li>
+                        <li className='text-lg text-white font-semibold'><Link to='/review'>Review</Link></li>
 
                     </ul>
                 </div>
