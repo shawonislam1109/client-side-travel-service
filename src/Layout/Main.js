@@ -14,8 +14,6 @@ const Main = () => {
             </section>
 
             <section className='outlet'>
-                <Slider />
-                <Section1 />
                 <Outlet></Outlet>
             </section>
 
