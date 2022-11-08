@@ -1,0 +1,13 @@
+.background{
+    background-image: url(./background.jpg);
+    height: 550px;
+
+    border-radius: 10px;
+}
+.backgrounds{
+    background-color: #544862;
+}
+.border{
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px;
+}
