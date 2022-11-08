@@ -19,21 +19,21 @@ const Header = () => {
             <div className="navbar bg-base-100 backgrounds border  shadow-xl">
                 <div className="navbar-start ">
                     <div className="dropdown">
-                        <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        <label tabIndex={0} className="   bg-yellow-400 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 mr-2 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
 
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            <li className='text-lg text-white font-semibold'><Link to='/home'>Home</Link></li>
-                            <li className='text-lg text-white font-semibold' tabIndex={0}><Link to='/login' >  Log In</Link>
+                            <li className='text-lg text-slate-800 font-semibold'><Link to='/home'>Home</Link></li>
+                            <li className='text-lg text-slate-800 font-semibold' tabIndex={0}><Link to='/login' >  Log In</Link>
                             </li>
-                            <li className='text-lg text-white font-semibold'><Link to='/signup'>Sign Up </Link></li>
+                            <li className='text-lg text-slate-800 font-semibold'><Link to='/signup'>Sign Up </Link></li>
                             <li onClick={Logout} className='text-lg text-white font-semibold'><Link>Log Out</Link></li>
                         </ul>
                     </div>
                     <div className='flex justify-center items-center '>
-                        <img className='w-16' src={logo} alt="" />
-                        <Link className="btn btn-ghost  normal-case text-3xl text-yellow-500 font-bold">LOVE TO TRAVEL</Link>
+                        <img className='w-9 ml-5 md:w-12' src={logo} alt="" />
+                        <Link to='/home' className="btn btn-ghost  normal-case lg:text-2xl text-md text-yellow-500 lg:font-bold">LOVE TO TRAVEL</Link>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -50,15 +50,15 @@ const Header = () => {
                     {
                         user?.uid ?
                             <>
-                                <button onClick={Logout} className='btn btn-ghost text-md text-white font-medium '><Link>Log Out</Link></button>
-                                <img className='w-12 h-12 rounded-full' src={user.photoURL} alt="" />
+                                <button onClick={Logout} className='btn btn-ghost md:text-md text-white md:font-medium '><Link>Log Out</Link></button>
+                                <img className='md:w-12 md:h-12 h-7 w-7 rounded-full' src={user.photoURL} alt="" />
                             </>
                             :
                             <>
-                                <button className=' btn btn-ghost text-md text-white font-medium' tabIndex={0}>
+                                <button className=' btn  btn-ghost md:text-md text-white md:font-medium' tabIndex={0}>
                                     <Link to='/login'>Log In </Link>
                                 </button>
-                                <button className='text-md btn btn-ghost text-white font-medium'><Link to='/signup'>Sign Up</Link></button>
+                                <button className='md:text-md btn  btn-ghost text-white md:font-medium'><Link to='/signup'>Sign Up</Link></button>
 
                             </>
                     }

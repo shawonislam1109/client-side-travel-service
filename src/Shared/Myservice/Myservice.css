@@ -1,0 +1,18 @@
+.pagination{
+    text-align: center; 
+    padding: 30px 0px;
+}
+.pagination button {
+    padding: 15px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.pagination .selected {
+    padding: 21px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: rgb(202, 72, 72);
+    border-radius: 5px;
+}
