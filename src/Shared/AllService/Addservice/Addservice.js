@@ -41,7 +41,7 @@ const AddService = () => {
             .catch(er => console.error(er));
     }
     return (
-        <div className='md:w-9/12 mx-auto'>
+        <div className='md:w-9/12 mx-auto px-10 md:px-5'>
             <form onSubmit={handlePlaceOrder}>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 my-10'>
                     <div>

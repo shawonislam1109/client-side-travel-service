@@ -4,6 +4,7 @@ import ErrorPage from "../Component/ErrorPage/ErrorPage";
 import Home from "../Component/Home/Home";
 import Login from "../Component/Login/Login";
 import PrivateRoute from "../Component/PrivateRoute/PrivateRoute";
+import Review from "../Component/Review/Review";
 import Signup from "../Component/signUp/Singup";
 import Main from "../Layout/Main";
 import AddService from "../Shared/AllService/Addservice/Addservice";
@@ -50,6 +51,10 @@ export const route = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog />
+            },
+            {
+                path: '/review',
+                element: <PrivateRoute><Review /></PrivateRoute>
             }
         ]
     },
