@@ -3,7 +3,8 @@ import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
 
 const ServiceSingle = ({ service }) => {
-    const { img, name, cost, details, _id, rating } = service
+    const { img, name, cost, details, _id, rating } = service;
+    console.log(_id);
     return (
         <div className="card card-compact  bg-base-100 shadow-xl my-10 m-10">
             <div className='relative'>

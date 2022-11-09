@@ -35,7 +35,7 @@ const AddService = () => {
                 console.log(data)
                 if (data.acknowledged) {
                     form.reset();
-                    <Navigate to='/service'></Navigate>
+                    <Navigate to='/service'> </Navigate>
                 }
             })
             .catch(er => console.error(er));

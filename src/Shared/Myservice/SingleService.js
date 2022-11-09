@@ -18,7 +18,7 @@ const SingleService = () => {
                         <div className='flex justify-center items-center mt-3 text-yellow-500'><FaStar /> <FaStar /> <FaStar /></div>
                     </div>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                        <button className="btn btn-primary">Book Now</button>
                     </div>
                 </div>
             </div>
