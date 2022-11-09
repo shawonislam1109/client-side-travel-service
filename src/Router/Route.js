@@ -2,8 +2,10 @@ import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../Component/ErrorPage/ErrorPage";
 import Home from "../Component/Home/Home";
 import Login from "../Component/Login/Login";
+import PrivateRoute from "../Component/PrivateRoute/PrivateRoute";
 import Signup from "../Component/signUp/Singup";
 import Main from "../Layout/Main";
+import AddService from "../Shared/AllService/Addservice/Addservice";
 import AllService from "../Shared/AllService/AllService";
 import SingleService from "../Shared/Myservice/SingleService";
 
@@ -39,6 +41,10 @@ export const route = createBrowserRouter([
                 path: '/service',
                 element: <AllService></AllService>,
                 loader: () => fetch('http://localhost:5000/services')
+            },
+            {
+                path: '/addService',
+                element: <PrivateRoute><AddService></AddService></PrivateRoute>
             }
         ]
     },

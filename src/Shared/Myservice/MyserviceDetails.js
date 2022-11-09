@@ -15,10 +15,10 @@ const MyserviceDetails = ({ service }) => {
             </div>
             <div className="card-body">
                 <h2 className="card-title font-bold text-yellow-600">{name}</h2>
-                <p className='font-semibold text-slate-800'>{details ? details.slice(0, 100) + `...see more` : 'undefined'}</p>
+                <p className='font-semibold text-xl text-slate-800'>{details ? details.slice(0, 100) + `...see more` : 'undefined'}</p>
                 <h1 className='text-3xl font-bold'><span className='text-yellow-600 text-4xl'>$</span>{cost} <span className='text-2xl font-semibold'>/personal</span></h1>
                 <div className="card-actions justify-end">
-                    <Link to={`/SingleService/${_id}`}><button className="btn btn-primary font-bold">Details</button></Link>
+                    <Link to={`/SingleService/${_id}`}><button className="btn btn-ghost bg-red-500 font-bold">Details</button></Link>
                 </div>
 
             </div>
