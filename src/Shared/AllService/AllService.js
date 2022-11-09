@@ -1,10 +1,14 @@
 import React from 'react';
-import MyService from '../Myservice/MyService';
+import { useLoaderData } from 'react-router-dom'
+import ServiceSingle from './SingleService';
 
 const AllService = () => {
+    const allData = useLoaderData();
     return (
-        <div>
-            <MyService />
+        <div className='grid md:grid-cols-2  lg:grid-cols-3 w-9/12 mx-auto'>
+            {
+                allData.service.map(service => <ServiceSingle key={service._id} service={service}></ServiceSingle>)
+            }
         </div>
     );
 };

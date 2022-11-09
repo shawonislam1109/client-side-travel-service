@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Myservice.css'
 import MyserviceDetails from './MyserviceDetails';
 
@@ -27,12 +28,15 @@ const MyService = () => {
             <p className='text-center mt-9 md:text-xl font-bold text-blue-900'>my service is service is best service from anyone . <br />  My service is this  section in down</p>
 
 
-            <div className='md:grid md:grid-cols-2 lg:grid-cols-3 my-14 items-center justify-between'>
+            <div className='md:grid md:grid-cols-2 lg:grid-cols-3 mt-14 items-center justify-between'>
                 {
                     service.map(service => <MyserviceDetails key={service._id} service={service}></MyserviceDetails>)
                 }
             </div>
 
+            <div className='text-end'>
+                <button className='btn btn-ghost bg-yellow-500 w-32'><Link className='text-center' to='/service'>See all</Link></button>
+            </div>
 
             {/* pagination  section */}
             <div className='md:w-9/12 mx-auto pagination'>

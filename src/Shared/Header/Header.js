@@ -28,20 +28,22 @@ const Header = () => {
                             <li className='text-lg text-slate-800 font-semibold' tabIndex={0}><Link to='/service' >Service</Link>
                             </li>
                             <li className='text-lg text-slate-800 font-semibold'><Link to='/review'>Review</Link></li>
+                            <li className='text-lg text-white font-semibold'><Link to='/blog'>Blog</Link></li>
                         </ul>
                     </div>
                     <div className='flex justify-center items-center '>
-                        <img className='w-9 ml-5 md:w-12' src={logo} alt="" />
+                        <img className='w-9 ml-5 lg:ml-10 md:w-12' src={logo} alt="" />
                         <Link to='/home' className="btn btn-ghost  normal-case lg:text-2xl text-md text-yellow-500 lg:font-bold">LOVE TO TRAVEL</Link>
                     </div>
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className="navbar-center hidden lg:flex ml-5 lg:ml-10">
                     <ul className="menu menu-horizontal p-0">
-                        <li className='text-lg text-white  font-semibold'><Link to='/home'>Home</Link></li>
-                        <li className='text-lg text-white font-semibold' tabIndex={0}>
+                        <li className='text-lg text-white  '><Link to='/home'>Home</Link></li>
+                        <li className='text-lg text-white ' tabIndex={0}>
                             <Link to='/service'>Service</Link>
                         </li>
-                        <li className='text-lg text-white font-semibold'><Link to='/review'>Review</Link></li>
+                        <li className='text-lg text-white '><Link to='/review'>Review</Link></li>
+                        <li className='text-lg text-white '><Link to='/blog'>Blog</Link></li>
 
                     </ul>
                 </div>

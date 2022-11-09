@@ -37,7 +37,8 @@ export const route = createBrowserRouter([
             },
             {
                 path: '/service',
-                element: <AllService></AllService>
+                element: <AllService></AllService>,
+                loader: () => fetch('http://localhost:5000/services')
             }
         ]
     },

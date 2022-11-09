@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
-const MyserviceDetails = ({ service }) => {
+const ServiceSingle = ({ service }) => {
     const { img, name, cost, details, _id } = service
     return (
         <div className="card card-compact  bg-base-100 shadow-xl my-10 m-10">
@@ -18,4 +18,4 @@ const MyserviceDetails = ({ service }) => {
     );
 };
 
-export default MyserviceDetails;
+export default ServiceSingle;

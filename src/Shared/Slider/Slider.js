@@ -5,6 +5,7 @@ import image1 from './image/img1.jpg'
 import image2 from './image/img2.jpg'
 import image3 from './image/img3.jpg'
 import image4 from './image/side.png'
+import { Link } from 'react-router-dom';
 
 
 const Slider = () => {
@@ -32,7 +33,7 @@ const Slider = () => {
                     </div>
 
                     <div className="absolute flex    transform -translate-y-1/2 left-20  bottom-48 md:bottom-36 ">
-                        <button className="btn btn-outline btn-warning">Explore more</button>
+                        <Link to='/service'> <button className="btn btn-outline btn-warning">Explore more</button></Link>
                     </div>
                     <div className="absolute flex    transform -translate-y-1/2   left-5  bottom-5 ">
                         <a href="#slide3" className="btn btn-circle mr-5">❮</a>
@@ -59,7 +60,7 @@ const Slider = () => {
                     </div>
 
                     <div className="absolute flex    transform -translate-y-1/2   left-20 md:bottom-36 bottom-48 ">
-                        <button className="btn btn-outline btn-warning">Explore more</button>
+                        <Link to='/service'> <button className="btn btn-outline btn-warning">Explore more</button></Link>
                     </div>
                     <div className="absolute flex    transform -translate-y-1/2   left-5  bottom-5 ">
                         <a href="#slide1" className="btn btn-circle mr-5">❮</a>
@@ -86,17 +87,13 @@ const Slider = () => {
                     </div>
 
                     <div className="absolute flex    transform -translate-y-1/2   left-20 md:bottom-36 bottom-48 ">
-                        <button className="btn btn-outline btn-warning">Explore more</button>
+                        <Link to='/service'> <button className="btn btn-outline btn-warning">Explore more</button></Link>
                     </div>
                     <div className="absolute flex    transform -translate-y-1/2   left-5  bottom-5 ">
                         <a href="#slide2" className="btn btn-circle mr-5">❮</a>
                         <a href="#slide1" className="btn btn-circle">❯</a>
                     </div>
                 </div>
-
-
-
-
 
             </div>
         </div>
