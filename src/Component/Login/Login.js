@@ -5,12 +5,13 @@ import { useContext } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import UseTitle from '../Hooks/UserTitle';
 
 
 
 const Login = () => {
     const { GoogleSignIn, } = useContext(AuthContext);
-
+    UseTitle('Log in ')
     const provider = new GoogleAuthProvider()
     const { signIn, setLoader } = useContext(AuthContext);
     const [error, setError] = useState('');

@@ -2,6 +2,7 @@ import React from 'react';
 import { FaStar } from 'react-icons/fa';
 
 const ReviewDisplay = ({ review }) => {
+
     const { image, author, spaces, address } = review;
     console.log(author)
     return (

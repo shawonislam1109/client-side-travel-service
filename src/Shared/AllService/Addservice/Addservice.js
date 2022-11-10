@@ -1,11 +1,12 @@
 import React from 'react';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import UseTitle from '../../../Component/Hooks/UserTitle';
 
 
 const AddService = () => {
     const navigate = useNavigate();
-
+    UseTitle('Add service')
     const handlePlaceOrder = (event) => {
         event.preventDefault();
         const form = event.target;

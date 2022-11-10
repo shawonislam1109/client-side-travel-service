@@ -4,7 +4,6 @@ import { FaStar } from 'react-icons/fa';
 const ReviewDetails = ({ reviewData, deleteReview }) => {
 
 
-
     const { author, image, address, spaces, _id } = reviewData;
     console.log(_id)
     return (
