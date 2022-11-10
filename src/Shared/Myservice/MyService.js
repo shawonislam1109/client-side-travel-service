@@ -49,7 +49,7 @@ const MyService = () => {
                         {number + 1}
                     </button>)
                 }
-                <select className='w-12 ml-5 bg-red-500 h-16 rounded-md' onChange={(event) => setSize(event.target.value)}>
+                <select className='w-12 ml-5 bg-red-500 h-16 rounded-md' onBlur={(event) => setSize(event.target.value)}>
                     <option value="2">2</option>
                     <option value="3" selected>3</option>
                 </select>

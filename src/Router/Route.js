@@ -6,6 +6,7 @@ import Login from "../Component/Login/Login";
 import PrivateRoute from "../Component/PrivateRoute/PrivateRoute";
 import Review from "../Component/Review/Review";
 import Signup from "../Component/signUp/Singup";
+import Update from "../Component/Update/Update";
 import Main from "../Layout/Main";
 import AddService from "../Shared/AllService/Addservice/Addservice";
 import AllService from "../Shared/AllService/AllService";
@@ -56,6 +57,11 @@ export const route = createBrowserRouter([
                 path: '/review',
                 element: <PrivateRoute><Review /></PrivateRoute>,
                 loader: () => fetch('http://localhost:5000/services')
+            },
+            {
+                path: '/review/:id',
+                element: <Update />,
+                loader: ({ params }) => fetch(`http://localhost:5000/review/${params.id}`)
             }
         ]
     },

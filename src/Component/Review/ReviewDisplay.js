@@ -1,12 +1,13 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
+import './Review.css'
 
 const ReviewDisplay = ({ review }) => {
 
     const { image, author, spaces, address } = review;
     console.log(author)
     return (
-        <div>
+        <div className=''>
             <div className=' p-10 md:p-5  border-4   shadow-xl  rounded-xl bg-slate-800'>
                 <div className='flex justify-center items-center'>
                     <img className='w-20 h-20 rounded-full border-yellow-500 border-4' src={image} alt="" />

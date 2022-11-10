@@ -19,22 +19,27 @@ const Review = () => {
 
     }, [user?.email])
 
+
     const deleteReview = (id) => {
-        fetch(`http://localhost:5000/review/${id}`, {
-            method: 'DELETE',
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if (data.deletedCount > 0) {
-                    const remaining = review.filter(review => review._id !== id);
-                    setReview(remaining);
-                    toast.success('Deleted Successfully')
-                }
+        const agree = window.confirm('if you want to delete it')
+        if (agree) {
+            fetch(`http://localhost:5000/review/${id}`, {
+                method: 'DELETE',
             })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if (data.deletedCount > 0) {
+                        const remaining = review.filter(review => review._id !== id);
+                        setReview(remaining);
+                        toast.success('Deleted Successfully')
+                    }
+                })
+        }
     }
 
-    const handlePlaceOrder = (event) => {
+
+    const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
@@ -90,7 +95,7 @@ const Review = () => {
                 }
             </div>
             <div className='md:w-9/12 w-4/6 mx-auto p-5 md:p-3'>
-                <form onSubmit={handlePlaceOrder}>
+                <form onSubmit={handleSubmit}>
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 my-10'>
                         <div>
                             <label className='text-xl font-bold' htmlFor="">Author name</label>

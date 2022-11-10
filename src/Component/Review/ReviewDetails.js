@@ -1,11 +1,11 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const ReviewDetails = ({ reviewData, deleteReview }) => {
 
 
     const { author, image, address, spaces, _id } = reviewData;
-    console.log(_id)
     return (
         <div className=' p-10 md:p-5  border-4 ml-5 shadow-xl  rounded-xl bg-slate-800'>
             <div className='flex justify-center items-center'>
@@ -21,6 +21,8 @@ const ReviewDetails = ({ reviewData, deleteReview }) => {
             </div>
             <div className='text-end'>
                 <button onClick={() => deleteReview(_id)} className='btn btn-ghost bg-yellow-500 text-black font-semibold mt-2'>Delete</button>
+
+                <Link to={`/review/${_id}`}>  <button className='btn btn-ghost ml-3 bg-yellow-500 text-black font-semibold mt-2'>Edit</button></Link>
             </div>
         </div>
     );
