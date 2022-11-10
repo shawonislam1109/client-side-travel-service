@@ -9,7 +9,7 @@ const HomeReview = () => {
     console.log(reviewData);
 
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://service-review-sever.vercel.app/review')
             .then(res => res.json())
             .then(data => {
                 setHomereview(data)

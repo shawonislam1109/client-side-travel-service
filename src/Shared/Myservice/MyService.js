@@ -11,7 +11,7 @@ const MyService = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services?page=${page}&size=${size}`)
+        fetch(`https://service-review-sever.vercel.app/services?page=${page}&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setCount(data.count);

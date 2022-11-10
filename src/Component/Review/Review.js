@@ -11,7 +11,7 @@ const Review = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/review?email=${user?.email}`)
+        fetch(`https://service-review-sever.vercel.app/review?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setReview(data)
@@ -23,7 +23,7 @@ const Review = () => {
     const deleteReview = (id) => {
         const agree = window.confirm('if you want to delete it')
         if (agree) {
-            fetch(`http://localhost:5000/review/${id}`, {
+            fetch(`https://service-review-sever.vercel.app/review/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())
@@ -57,7 +57,7 @@ const Review = () => {
             spaces
         }
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://service-review-sever.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
