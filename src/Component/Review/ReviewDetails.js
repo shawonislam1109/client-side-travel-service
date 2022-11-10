@@ -8,7 +8,7 @@ const ReviewDetails = ({ reviewData, deleteReview }) => {
     const { author, image, address, spaces, _id } = reviewData;
     console.log(_id)
     return (
-        <div className='md:w-9/12 p-10 md:p-5 border-4 lg:ml-20 ml-10 shadow-xl my-10 rounded-xl bg-slate-800'>
+        <div className=' p-10 md:p-5  border-4 ml-5 shadow-xl  rounded-xl bg-slate-800'>
             <div className='flex justify-center items-center'>
                 <img className='w-20 h-20 rounded-full border-yellow-500 border-4' src={image} alt="" />
             </div>
@@ -21,7 +21,7 @@ const ReviewDetails = ({ reviewData, deleteReview }) => {
                 <p className='text-sm font-semibold text-white mt-3'>{spaces}</p>
             </div>
             <div className='text-end'>
-                <button onClick={() => deleteReview(_id)} className='btn btn-ghost bg-yellow-500 text-black font-semibold'>Delete</button>
+                <button onClick={() => deleteReview(_id)} className='btn btn-ghost bg-yellow-500 text-black font-semibold mt-2'>Delete</button>
             </div>
         </div>
     );

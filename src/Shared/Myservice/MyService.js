@@ -20,15 +20,14 @@ const MyService = () => {
     }, [page, size])
 
     const pages = Math.ceil(count / size)
-    console.log(pages)
 
     return (
         <div className='md:w-9/12 mx-auto'>
-            <h1 className='text-5xl font-bold lg:font-extrabold text-center '>MY <span className='text-yellow-500'>SERVICE</span> </h1>
+            <h1 className='md:text-5xl text-3xl font-bold lg:font-extrabold text-center '>MY <span className='text-yellow-500'>SERVICE</span> </h1>
             <p className='text-center mt-9 md:text-xl font-bold text-blue-900'>my service is service is best service from anyone . <br />  My service is this  section in down</p>
 
 
-            <div className='md:grid md:grid-cols-2 lg:grid-cols-3 mt-14 items-center justify-between'>
+            <div className='md:grid md:grid-cols-1 lg:grid-cols-3 mt-14 items-center justify-between'>
                 {
                     service.map(service => <MyserviceDetails key={service._id} service={service}></MyserviceDetails>)
                 }

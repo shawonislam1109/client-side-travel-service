@@ -18,7 +18,8 @@ const MyserviceDetails = ({ service }) => {
                 <p className='font-semibold text-xl text-slate-800'>{details ? details.slice(0, 100) + `...see more` : 'undefined'}</p>
                 <h1 className='text-3xl font-bold'><span className='text-yellow-600 text-4xl'>$</span>{cost} <span className='text-2xl font-semibold'>/personal</span></h1>
                 <div className="card-actions justify-end">
-                    <Link to={`/SingleService/${_id}`}><button className="btn btn-ghost bg-red-500 font-bold">Details</button></Link>
+                    <Link to={`/SingleService/${_id}`}><button className="btn btn-ghost bg-red-500  text-slate-900 font-bold">Details</button></Link>
+                    <Link to='/review'><button className="btn btn-ghost text-slate-900 bg-yellow-600 font-bold">Review</button></Link>
                 </div>
 
             </div>

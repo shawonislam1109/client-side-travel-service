@@ -2,8 +2,6 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
-import Section1 from '../Shared/section/Section1';
-import Slider from '../Shared/Slider/Slider';
 
 
 const Main = () => {

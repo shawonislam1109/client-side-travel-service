@@ -43,7 +43,8 @@ const AuthProvider = ({ children }) => {
         ProfileUpadte,
         logOut,
         GoogleSignIn,
-        loader
+        loader,
+        setLoader
     }
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {

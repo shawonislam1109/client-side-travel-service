@@ -5,9 +5,8 @@ import ReviewDetails from './ReviewDetails';
 
 const Review = () => {
 
-    const { user } = useContext(AuthContext);
+    const { user, setLoader } = useContext(AuthContext);
     const [review, setReview] = useState([]);
-    const [displayReview, setDisplayReview] = useState(review)
 
     useEffect(() => {
         fetch(`http://localhost:5000/review?email=${user?.email}`)
@@ -64,6 +63,9 @@ const Review = () => {
                     form.reset();
                     toast.success('Successfully Added Review')
                 }
+                else {
+                    setLoader(true)
+                }
             })
             .catch(er => console.error(er));
     }
@@ -72,7 +74,7 @@ const Review = () => {
             <div>
                 {
                     review.length > 0 ?
-                        <div className='grid lg:grid-cols-2 gap-4  px-10 md:px-5 '>
+                        <div className='grid lg:grid-cols-2 my-10  gap-4  px-10 md:px-5 '>
                             {
                                 review.map(reviewData => <ReviewDetails
                                     key={reviewData._id}

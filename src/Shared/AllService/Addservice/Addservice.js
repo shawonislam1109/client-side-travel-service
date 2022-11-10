@@ -1,8 +1,11 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 
 const AddService = () => {
+    const navigate = useNavigate();
+
     const handlePlaceOrder = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -21,7 +24,6 @@ const AddService = () => {
             cost
 
         }
-        console.log(addReview)
 
         fetch('http://localhost:5000/services', {
             method: 'POST',
@@ -35,7 +37,8 @@ const AddService = () => {
                 console.log(data)
                 if (data.acknowledged) {
                     form.reset();
-                    <Navigate to='/service'> </Navigate>
+                    toast.success('services successfully added ')
+                    navigate('/service')
                 }
             })
             .catch(er => console.error(er));
