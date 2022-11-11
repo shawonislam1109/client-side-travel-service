@@ -5,7 +5,7 @@ import { route } from './Router/Route';
 
 function App() {
   return (
-    <div >
+    <div data-theme="light" >
       <RouterProvider router={route} />
       <Toaster
         position="top-center"
