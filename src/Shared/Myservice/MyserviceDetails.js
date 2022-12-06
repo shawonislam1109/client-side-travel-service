@@ -1,13 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaStar } from 'react-icons/fa';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const MyserviceDetails = ({ service }) => {
     const { img, name, cost, details, _id, rating } = service
     return (
         <div className="card card-compact  bg-base-100 shadow-xl my-10 m-10">
             <div className='relative'>
-                <figure><img className='rounded-md' src={img} alt="Shoes" /></figure>
+                <PhotoProvider src={img}>
+                    <PhotoView>
+                        <figure><img className='rounded-md cursor-pointer' src={img} alt="" /></figure>
+                    </PhotoView>
+                </PhotoProvider>
                 <div className='flex items-center absolute top-2 right-3'>
                     <p className='text-xl font-bold '>{rating}  </p>
                     <FaStar className='text-yellow-500'></FaStar>
